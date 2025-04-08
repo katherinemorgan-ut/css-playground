@@ -3,24 +3,33 @@
 );
 
 body {
-    padding: 10%;
+    padding: 5% 10%;
     font-size: 2rem;
     font-family: 'Roboto', sans-serif;
 }
 
-a {
-    color: hsl(207, 44%, 49%);
+ol {
+    list-style-type: lower-alpha;
+    padding: 0;
 }
 
-/* a:visited {
-    color:purple;
-} */
-
-a:hover, a:focus {
-    color: hsla(207, 44%, 49%, 0.5);
-    background: gold;
+ul {
+    list-style-type: square; 
+    list-style-position: inside;
+    color: #00f;
+    line-height: 1.6;
+    /* list-style-image: url("../img/checkmark.png"); */
+    /* shorthand */
+    /* list-style: square url() inside;  */
 }
 
-a:active {
-    color:red;
+ul li:nth-child(even) {
+    color: red;
+}
+
+ul ::marker {
+    color: red;
+    font-family: fantasy;
+    font-size: 1em;
+    content: "Only $5 >> "
 }
