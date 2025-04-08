@@ -2,34 +2,58 @@
     'https://fonts.googleapis.com/css2?family=Roboto&display=swap'
 );
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0.5rem;
     padding: 5% 10%;
     font-size: 2rem;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
-ol {
-    list-style-type: lower-alpha;
-    padding: 0;
+nav {
+    border: 2px solid #333;
+    border-radius: 2rem;
+    margin: 0 auto 1rem;
+    max-width: 600px;
+    font-size: 3rem;
+    line-height: 7rem;
+}
+
+h2 {
+    padding: 1rem;
+    background: gold;
+    border-radius: 2rem 2rem 0 0;
 }
 
 ul {
-    list-style-type: square; 
-    list-style-position: inside;
-    color: #00f;
-    line-height: 1.6;
-    /* list-style-image: url("../img/checkmark.png"); */
-    /* shorthand */
-    /* list-style: square url() inside;  */
+    list-style: none;
 }
 
-ul li:nth-child(even) {
-    color: red;
+li {
+    border-top: 1px solid #333;
 }
 
-ul ::marker {
-    color: red;
-    font-family: fantasy;
-    font-size: 1em;
-    content: "Only $5 >> "
+li a {
+    display: block;
 }
+
+ li a, li a:visited {
+    text-decoration: none;
+    color:#333;
+ }
+
+ li a:hover, li a:hover {
+    background: #333;
+    color: whitesmoke;
+    cursor: pointer;
+ }
+
+ li:nth-child(5) a {
+    border-radius: 0 0 2rem 2rem;
+ }
