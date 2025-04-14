@@ -12,54 +12,42 @@
 body {
     font-size: 1.5rem;
     font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.outer-container {
-    border: 3px dashed #000;
-    width: 75vw;
-    height: 85vh;
-    margin: 40px auto;
-    position: relative;
-}
-
-.inner-container {
-    border: 2px solid #00f;
-    width: 40vw;
-    height: 50vh;
-    margin: 200px auto;
-
+.container {
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: auto;
+    border: 1px solid #000;
+    display: flex;
+    gap: 1rem;
+    justify-content:center;
+    align-items: center;
+    flex-flow: row wrap;
+    align-content: space-evenly;
 }
 
 .box {
-    width: 150px;
-    height: 150px;
-    color: #fff;
-    padding: 1rem;
-}
-
-.absolute {
-    background-color: #00f;
-    position: absolute;
-    top: 0;
-    left: -1000px;
-    z-index: 1;
-}
-
-.relative {
-    background-color: #f00;
-    position: relative;
-    top: 100px;
-    left: 100px;
-}
-
-.fixed {
-    background-color: green;
-    position: fixed;
-    top: 100px;
-}
-
-.sticky {
+    /* min-width: 100px; */
+    height: 100px;
     background-color: #000;
-    position: sticky;
-    top: 0;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* flex-grow: 1;
+    flex-basis: 100px; */
+    /* 1st is grow, 2nd is shrink, 3rd is basis */
+    flex: 1 1 40%;
+}
+
+.box:nth-child(2) {
+    /* 1st is grow, 2nd is shrink, 3rd is basis */
+    flex: 2 2 40%;
 }
