@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Media Queries</title>
+    <title>CSS Mini Project: Cards</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,18 +14,58 @@
   </head>
   <body>
     <header>
-        <h1>Header</h1>
-        <nav>
-            <h2>Nav</h2>
-        </nav>
+      <h1>Our Staff</h1>
     </header>
 
+    <nav>
+      <a href="#Joe">Joe</a>
+      <a href="#Matt">Matt</a>
+      <a href="#Jane">Jane</a>
+    </nav>
+
     <main>
-        <h2>Main</h2>
+      <article class="profile-container" id="Joe">
+        <figcaption>Joe Coder</figcaption>
+        <figure>
+          <img
+            src="img/profile1-500x500.png"
+            alt="Joe Coder Profile Picture"
+            width="500"
+            height="500"
+          />
+          <p><q>I code stuff.</q></p>
+        </figure>
+      </article>
+
+      <article class="profile-container" id="Matt">
+        <figcaption>Matt Designer</figcaption>
+        <figure>
+          <img
+            src="img/profile2-500x500.png"
+            alt="Matt Designer Profile Picture"
+            width="500"
+            height="500"
+          />
+          <p><q>I design stuff.</q></p>
+        </figure>
+      </article>
+
+      <article class="profile-container" id="Jane">
+        <figcaption>Jane <span class="nowrap">Dev Rel</span></figcaption>
+        <figure>
+          <img
+            src="img/profile3-500x500.png"
+            alt="Jane Dev Rel Profile Picture"
+            width="500"
+            height="500"
+          />
+          <p><q>I teach stuff.</q></p>
+        </figure>
+      </article>
     </main>
 
     <footer>
-        <h2>Footer</h2>
+      <p>&copy Acme Co.</p>
     </footer>
   </body>
 </html>
