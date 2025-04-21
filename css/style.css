@@ -14,6 +14,22 @@ img {
 }
 /* End Reset */
 
+/* Variables */
+:root {
+    /* COLOR */
+    --BGCOLOR: rgb(77, 75, 99);
+    --ALT-BGCOLOR: rgb(59, 60, 86);
+    --RADIAL-COLOR: whitesmoke;
+    --LIGHT-COLOR: whitesmoke;
+    --DARK-COLOR: #000;
+
+    /* FONTS */
+    --FF: "Nunito", sans-serif; /* "font family"*/
+    --FS: 1.5rem; /* font size*/
+    --FS-XL: 3rem;
+}
+
+
 /* Utility classes */
 .nowrap {
   white-space: nowrap;
@@ -24,25 +40,25 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font: 1.5rem "Nunito", sans-serif;
+  font: var(--FS) var(--FF);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: rgb(77, 75, 99);
-  background-image: radial-gradient(#fff, rgb(77, 75, 99));
+  background-color: var(--BGCOLOR);
+  background-image: radial-gradient(var(--RADIAL-COLOR), var(--BGCOLOR));
 }
 
 nav {
-  background-color: white;
+  background-color: var(--LIGHT-COLOR);
   text-align: center;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid var(--DARK-COLOR);
   font-weight: bolder;
   display: flex;
   justify-content: space-evenly;
 }
 
 nav a:any-link {
-  color: #000;
+  color: var(--DARK-COLOR);
 }
 
 nav :is(a:hover, a:focus) {
@@ -63,9 +79,9 @@ main {
 }
 
 h1 {
-  color: #fff;
+  color: var(--LIGHT-COLOR);
   text-align: center;
-  background-color: rgb(59, 60, 86);
+  background-color: var(--ALT-BGCOLOR);
   font-size: 2rem;
   margin: 0;
   position: sticky;
@@ -73,10 +89,10 @@ h1 {
 }
 
 footer {
-  color: #fff;
+  color: var(--LIGHT-COLOR);
   font-size: 1rem;
   text-align: center;
-  background-color: rgb(59, 60, 86);
+  background-color: var(--ALT-BGCOLOR);
   bottom: 0;
   position: sticky;
 }
@@ -141,6 +157,7 @@ footer {
 
 .profile-container figcaption::first-letter {
     font-size: 3rem;
+
 }
 
 .profile-container p {
